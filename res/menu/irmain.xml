@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/switchDevice"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="Switch Device"/>
+    <item android:id="@+id/resetIR" android:titleCondensed="Rst IR" android:title="Reset IR Device"></item>
+    <item android:id="@+id/addDevice" android:titleCondensed="Add Dev" android:title="Add Device"></item>
+    <item android:id="@+id/delDevice" android:titleCondensed="Del Dev" android:title="Delete Device"></item>
+
+</menu>

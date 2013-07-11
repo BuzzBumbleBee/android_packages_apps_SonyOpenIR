@@ -1,0 +1,352 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ir_activity_irmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#555"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".IRMainActivity" >
+
+    <Switch
+        android:id="@+id/leanswitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="14dp"
+        android:checked="false"
+        android:text="Learn" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/powerbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/leanswitch"
+        android:layout_marginTop="24dp"
+        android:text="Power" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/volupbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/powerbtn"
+        android:layout_below="@+id/powerbtn"
+        android:layout_marginTop="14dp"
+        android:text="Vol +" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/voldwnbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/volupbtn"
+        android:layout_below="@+id/volupbtn"
+        android:layout_marginTop="26dp"
+        android:text="vol -" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/chipbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/volupbtn"
+        android:layout_alignBottom="@+id/volupbtn"
+        android:layout_marginLeft="35dp"
+        android:layout_toRightOf="@+id/volupbtn"
+        android:text="CH+" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/chdwnbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/voldwnbtn"
+        android:layout_alignBottom="@+id/voldwnbtn"
+        android:layout_alignLeft="@+id/chipbtn"
+        android:text="CH-" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d1btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/volupbtn"
+        android:layout_below="@+id/chdwnbtn"
+        android:layout_marginTop="55dp"
+        android:text="1" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d2btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/d1btn"
+        android:layout_alignBottom="@+id/d1btn"
+        android:layout_toRightOf="@+id/voldwnbtn"
+        android:text="2" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d3btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/d2btn"
+        android:layout_alignBottom="@+id/d2btn"
+        android:layout_marginLeft="19dp"
+        android:layout_toRightOf="@+id/d2btn"
+        android:text="3" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d4btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/voldwnbtn"
+        android:layout_below="@+id/d1btn"
+        android:layout_marginTop="15dp"
+        android:text="4" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d5btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/d4btn"
+        android:layout_alignBottom="@+id/d4btn"
+        android:layout_toLeftOf="@+id/d3btn"
+        android:text="5" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d6btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/d5btn"
+        android:layout_alignBottom="@+id/d5btn"
+        android:layout_alignLeft="@+id/d3btn"
+        android:text="6" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d7btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/d4btn"
+        android:layout_below="@+id/d4btn"
+        android:layout_marginTop="15dp"
+        android:text="7" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d8btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/d7btn"
+        android:layout_alignBottom="@+id/d7btn"
+        android:layout_toRightOf="@+id/voldwnbtn"
+        android:text="8" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d9btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/d8btn"
+        android:layout_alignBottom="@+id/d8btn"
+        android:layout_alignLeft="@+id/d6btn"
+        android:text="9" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/d0btn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/d8btn"
+        android:layout_marginTop="12dp"
+        android:layout_toLeftOf="@+id/d3btn"
+        android:text="0" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mutebtn"
+        android:layout_alignBottom="@+id/mutebtn"
+        android:layout_alignRight="@+id/arrowleftbtn"
+        android:layout_marginRight="19dp"
+        android:text="Back" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/menubtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/backbtn"
+        android:layout_below="@+id/powerbtn"
+        android:text="Menu" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/guidebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/menubtn"
+        android:layout_centerHorizontal="true"
+        android:text="Guide" />
+
+        android:height="10dp" />
+
+    <TextView
+        android:id="@+id/identify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/leanswitch"
+        android:layout_alignLeft="@+id/powerbtn"
+        android:layout_marginBottom="13dp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/arrowleftbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/d4btn"
+        android:layout_toLeftOf="@+id/guidebtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/arrowl"
+        android:gravity="center_horizontal|center_vertical" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/arrowrightbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/arrowleftbtn"
+        android:layout_alignBottom="@+id/arrowleftbtn"
+        android:layout_marginLeft="34dp"
+        android:layout_toRightOf="@+id/guidebtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/arrowr"
+        android:textColorHint="#0000" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/inputbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/d0btn"
+        android:layout_alignBottom="@+id/d0btn"
+        android:layout_alignLeft="@+id/arrowrightbtn"
+        android:text="Inputs" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/mutebtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/arrowdwnBtn"
+        android:layout_alignTop="@+id/d0btn"
+        android:text="Mute" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/selectbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/arrowleftbtn"
+        android:layout_alignBottom="@+id/arrowleftbtn"
+        android:layout_centerHorizontal="true"
+        android:text="Select" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/arrowdwnBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/arrowupbtn"
+        android:layout_alignTop="@+id/d6btn"
+        android:background="#0000"
+        android:drawableTop="@drawable/arrowd" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/arrowupbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/voldwnbtn"
+        android:layout_centerHorizontal="true"
+        android:background="#0000"
+        android:drawableBottom="@drawable/arrowu" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/playbtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mutebtn"
+        android:layout_alignBottom="@+id/mutebtn"
+        android:layout_marginLeft="95dp"
+        android:layout_toRightOf="@+id/inputbtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/arrowr"
+        android:textColorHint="#0000" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/stopBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/playbtn"
+        android:layout_alignBottom="@+id/playbtn"
+        android:layout_toRightOf="@+id/playbtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/stop"
+        android:textColorHint="#0000" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/paueBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/stopBtn"
+        android:layout_alignBottom="@+id/stopBtn"
+        android:layout_toRightOf="@+id/stopBtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/pause"
+        android:textColorHint="#0000" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/rewindBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/paueBtn"
+        android:layout_alignBottom="@+id/paueBtn"
+        android:layout_toRightOf="@+id/paueBtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/rewind"
+        android:textColorHint="#0000" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/fastfBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rewindBtn"
+        android:layout_alignBottom="@+id/rewindBtn"
+        android:layout_toRightOf="@+id/rewindBtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/fastf"
+        android:textColorHint="#0000" />
+
+    <com.buzz.bee.openir.irButton
+        android:id="@+id/recBtn"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/fastfBtn"
+        android:layout_alignBottom="@+id/fastfBtn"
+        android:layout_toRightOf="@+id/fastfBtn"
+        android:background="#0000"
+        android:drawableLeft="@drawable/record"
+        android:textColorHint="#0000" />
+
+</RelativeLayout>
