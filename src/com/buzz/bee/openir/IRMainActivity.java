@@ -403,10 +403,12 @@ public class IRMainActivity extends Activity {
         File dir = new File(baseDir);
         String[] dir_contents = dir.list();
         
-        if (dir_contents == null) {
+        if (dir_contents.length < 1) {
             
             
             new File(baseDir+"default").mkdir();
+            updateDevice();
+            return;
             
         }
         
