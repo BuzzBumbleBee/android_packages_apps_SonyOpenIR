@@ -46,7 +46,7 @@ public class IRMainActivity extends Activity {
     AlertDialog.Builder altDialog;
     
     static {
-        System.loadLibrary("sonyopenir");
+        System.loadLibrary("jni_sonyopenir");
     }
     
      static String TAG = "OpenIR";
@@ -159,19 +159,7 @@ public class IRMainActivity extends Activity {
         learn.setChecked(false);
         
         altDialog= new AlertDialog.Builder(this);
-        
-        String[] chownIR = { "su", "-c", "chown system:sdcard_rw /sys/devices/platform/ir_remote_control/enable"};
-        String[] chownHSL = { "su", "-c", "chown system:sdcard_rw /dev/ttyHSL2"};
 
-            
-        try {
-            Runtime.getRuntime().exec(chownIR);
-            Runtime.getRuntime().exec(chownHSL);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        
-        
         int status = 0;
         
         updateAvailButtons();

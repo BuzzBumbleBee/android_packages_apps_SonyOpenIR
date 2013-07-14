@@ -18,7 +18,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="14dp"
         android:checked="false"
-        android:text="Learn" />
+        android:text="@string/learn" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/powerbtn"
@@ -27,7 +27,7 @@
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/leanswitch"
         android:layout_marginTop="24dp"
-        android:text="Power" />
+        android:text="@string/power" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/volupbtn"
@@ -36,7 +36,7 @@
         android:layout_alignRight="@+id/powerbtn"
         android:layout_below="@+id/powerbtn"
         android:layout_marginTop="14dp"
-        android:text="Vol +" />
+        android:text="@string/volume_up" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/voldwnbtn"
@@ -45,7 +45,7 @@
         android:layout_alignRight="@+id/volupbtn"
         android:layout_below="@+id/volupbtn"
         android:layout_marginTop="26dp"
-        android:text="vol -" />
+        android:text="@string/volume_down" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/chipbtn"
@@ -56,7 +56,7 @@
         android:layout_alignBottom="@+id/volupbtn"
         android:layout_marginLeft="35dp"
         android:layout_toRightOf="@+id/volupbtn"
-        android:text="CH+" />
+        android:text="@string/channel_up" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/chdwnbtn"
@@ -66,7 +66,7 @@
         android:layout_alignBaseline="@+id/voldwnbtn"
         android:layout_alignBottom="@+id/voldwnbtn"
         android:layout_alignLeft="@+id/chipbtn"
-        android:text="CH-" />
+        android:text="@string/channel_down" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d1btn"
@@ -76,7 +76,7 @@
         android:layout_alignLeft="@+id/volupbtn"
         android:layout_below="@+id/chdwnbtn"
         android:layout_marginTop="55dp"
-        android:text="1" />
+        android:text="@string/digit1" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d2btn"
@@ -86,7 +86,7 @@
         android:layout_alignBaseline="@+id/d1btn"
         android:layout_alignBottom="@+id/d1btn"
         android:layout_toRightOf="@+id/voldwnbtn"
-        android:text="2" />
+        android:text="@string/digit2" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d3btn"
@@ -97,7 +97,7 @@
         android:layout_alignBottom="@+id/d2btn"
         android:layout_marginLeft="19dp"
         android:layout_toRightOf="@+id/d2btn"
-        android:text="3" />
+        android:text="@string/digit3" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d4btn"
@@ -107,7 +107,7 @@
         android:layout_alignLeft="@+id/voldwnbtn"
         android:layout_below="@+id/d1btn"
         android:layout_marginTop="15dp"
-        android:text="4" />
+        android:text="@string/digit4" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d5btn"
@@ -117,7 +117,7 @@
         android:layout_alignBaseline="@+id/d4btn"
         android:layout_alignBottom="@+id/d4btn"
         android:layout_toLeftOf="@+id/d3btn"
-        android:text="5" />
+        android:text="@string/digit5" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d6btn"
@@ -127,7 +127,7 @@
         android:layout_alignBaseline="@+id/d5btn"
         android:layout_alignBottom="@+id/d5btn"
         android:layout_alignLeft="@+id/d3btn"
-        android:text="6" />
+        android:text="@string/digit6" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d7btn"
@@ -137,7 +137,7 @@
         android:layout_alignLeft="@+id/d4btn"
         android:layout_below="@+id/d4btn"
         android:layout_marginTop="15dp"
-        android:text="7" />
+        android:text="@string/digit7" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d8btn"
@@ -147,7 +147,7 @@
         android:layout_alignBaseline="@+id/d7btn"
         android:layout_alignBottom="@+id/d7btn"
         android:layout_toRightOf="@+id/voldwnbtn"
-        android:text="8" />
+        android:text="@string/digit8" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d9btn"
@@ -157,7 +157,7 @@
         android:layout_alignBaseline="@+id/d8btn"
         android:layout_alignBottom="@+id/d8btn"
         android:layout_alignLeft="@+id/d6btn"
-        android:text="9" />
+        android:text="@string/digit9" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/d0btn"
@@ -167,7 +167,7 @@
         android:layout_below="@+id/d8btn"
         android:layout_marginTop="12dp"
         android:layout_toLeftOf="@+id/d3btn"
-        android:text="0" />
+        android:text="@string/digit0" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/backbtn"
@@ -177,7 +177,7 @@
         android:layout_alignBottom="@+id/mutebtn"
         android:layout_alignRight="@+id/arrowleftbtn"
         android:layout_marginRight="19dp"
-        android:text="Back" />
+        android:text="@string/back" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/menubtn"
@@ -185,7 +185,7 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/backbtn"
         android:layout_below="@+id/powerbtn"
-        android:text="Menu" />
+        android:text="@string/menu" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/guidebtn"
@@ -193,7 +193,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/menubtn"
         android:layout_centerHorizontal="true"
-        android:text="Guide" />
+        android:text="@string/guide" />
 
         android:height="10dp" />
 
@@ -236,7 +236,7 @@
         android:layout_alignBaseline="@+id/d0btn"
         android:layout_alignBottom="@+id/d0btn"
         android:layout_alignLeft="@+id/arrowrightbtn"
-        android:text="Inputs" />
+        android:text="@string/inputs" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/mutebtn"
@@ -244,7 +244,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/arrowdwnBtn"
         android:layout_alignTop="@+id/d0btn"
-        android:text="Mute" />
+        android:text="@string/mute" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/selectbtn"
@@ -254,7 +254,7 @@
         android:layout_alignBaseline="@+id/arrowleftbtn"
         android:layout_alignBottom="@+id/arrowleftbtn"
         android:layout_centerHorizontal="true"
-        android:text="Select" />
+        android:text="@string/select" />
 
     <com.buzz.bee.openir.irButton
         android:id="@+id/arrowdwnBtn"
