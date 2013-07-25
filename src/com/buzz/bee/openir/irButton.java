@@ -18,16 +18,28 @@
 package com.buzz.bee.openir;
 
 import android.content.Context;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.Button;
 
 public class irButton extends Button {
 
 	String name = null;
-	
+	int icon = -99999;
+
 	irButton(Context context){
 		
 		super(context);
+		
+	}
+	
+	public void setIcon(int res) {
+		icon = res;
 		
 	}
 	
@@ -50,6 +62,20 @@ public class irButton extends Button {
 		return name;
 	}
 	
-	
+	@Override
+	protected void onDraw(Canvas canvas) {  
+	    super.onDraw(canvas);
+	    
+	    if (icon != -99999) {
+	    
+	    	Resources res = getResources();
+	    	Bitmap bitmap = BitmapFactory.decodeResource(res, icon);
+	    	   
+	    	Rect rectangle = new Rect(20,20,canvas.getWidth()-20,canvas.getHeight()-20);
+	    
+	    	canvas.drawBitmap(bitmap, null, rectangle, new Paint());
+	    }
+	}
 
 }
+

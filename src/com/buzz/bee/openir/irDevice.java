@@ -87,12 +87,16 @@ public class irDevice {
 		deviceButtons[14].setName("d9btn");
 		deviceButtons[15] = (irButton) this.activity.findViewById(R.id.arrowupbtn);
 		deviceButtons[15].setName("arrowupbtn");
+		deviceButtons[15].setIcon(R.drawable.arrowu);
 		deviceButtons[16] = (irButton) this.activity.findViewById(R.id.arrowdwnBtn);
 		deviceButtons[16].setName("arrordwnbtn");
+		deviceButtons[16].setIcon(R.drawable.arrowd);
 		deviceButtons[17] = (irButton) this.activity.findViewById(R.id.arrowleftbtn);
 		deviceButtons[17].setName("arrowleftbtn");
+		deviceButtons[17].setIcon(R.drawable.arrowl);
 		deviceButtons[18] = (irButton) this.activity.findViewById(R.id.arrowrightbtn);
 		deviceButtons[18].setName("arrowrightbtn");
+		deviceButtons[18].setIcon(R.drawable.arrowr);
 		deviceButtons[19] = (irButton) this.activity.findViewById(R.id.selectbtn);
 		deviceButtons[19].setName("selectbtn");
 		deviceButtons[20] = (irButton) this.activity.findViewById(R.id.backbtn);
@@ -107,16 +111,22 @@ public class irDevice {
 		deviceButtons[24].setName("guidebtn");
 		deviceButtons[25] = (irButton) this.activity.findViewById(R.id.playbtn);
 		deviceButtons[25].setName("playbtn");
+		deviceButtons[25].setIcon(R.drawable.arrowr);
 		deviceButtons[26] = (irButton) this.activity.findViewById(R.id.stopBtn);
 		deviceButtons[26].setName("stopbtn");
+		deviceButtons[26].setIcon(R.drawable.stop);
 		deviceButtons[27] = (irButton) this.activity.findViewById(R.id.paueBtn);
 		deviceButtons[27].setName("pausebtn");
+		deviceButtons[27].setIcon(R.drawable.pause);
 		deviceButtons[28] = (irButton) this.activity.findViewById(R.id.rewindBtn);
 		deviceButtons[28].setName("rew_btn");
+		deviceButtons[28].setIcon(R.drawable.rewind);
 		deviceButtons[29] = (irButton) this.activity.findViewById(R.id.fastfBtn);
 		deviceButtons[29].setName("ff_btn");
+		deviceButtons[29].setIcon(R.drawable.fastf);
 		deviceButtons[30] = (irButton) this.activity.findViewById(R.id.recBtn);
 		deviceButtons[30].setName("recordBtn");
+		deviceButtons[30].setIcon(R.drawable.record);
 		buttonCount = 31;
 		
 		
