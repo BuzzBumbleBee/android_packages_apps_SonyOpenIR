@@ -5,7 +5,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:alwaysDrawnWithCache="true"
-    android:background="#0000"
+    android:background="#333"
     android:clipChildren="true"
     android:horizontalSpacing="4dp"
     android:numColumns="auto_fit"
@@ -15,7 +15,8 @@
     android:verticalSpacing="4dp"
     tools:context=".MainActivity" >
     
-        <Switch
+   <Switch
+        android:textColor="#fff"
         android:id="@+id/leanswitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,6 +26,7 @@
         android:text="@string/learn" />
     
    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
 	android:id="@+id/powerbtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -35,6 +37,7 @@
 	android:text="@string/power" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/volupbtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -45,6 +48,7 @@
         android:text="@string/volume_up" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/voldwnbtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -55,6 +59,7 @@
         android:text="@string/volume_down" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/chipbtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -65,6 +70,7 @@
         android:text="@string/channel_up" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/chdwnbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -77,106 +83,116 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/d1btn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:layout_row="3"
-	android:layout_column="0"
+	android:layout_row="4"
+	android:layout_column="1"
 	android:width="@dimen/button_size"
 	android:height="@dimen/button_size"
         android:text="@string/digit1" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/d2btn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:layout_row="3"
-	android:layout_column="1"
+	android:layout_row="4"
+	android:layout_column="2"
 	android:width="@dimen/button_size"
 	android:height="@dimen/button_size"
         android:text="@string/digit2" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/d3btn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:layout_row="3"
-	android:layout_column="2"
+	android:layout_row="4"
+	android:layout_column="3"
 	android:width="@dimen/button_size"
 	android:height="@dimen/button_size"
         android:text="@string/digit3" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/d4btn"
  	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:layout_row="4"
-	android:layout_column="0"
+	android:layout_row="5"
+	android:layout_column="1"
 	android:width="@dimen/button_size"
 	android:height="@dimen/button_size"
         android:text="@string/digit4" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/d5btn"
  	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:layout_row="4"
-	android:layout_column="1"
+	android:layout_row="5"
+	android:layout_column="2"
 	android:width="@dimen/button_size"
 	android:height="@dimen/button_size"
         android:text="@string/digit5" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/d6btn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
-	android:layout_row="4"
-	android:layout_column="2"
+	android:layout_row="5"
+	android:layout_column="3"
 	android:width="@dimen/button_size"
 	android:height="@dimen/button_size"
         android:text="@string/digit6" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/d7btn"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:layout_row="5"
-	android:layout_column="0"
-	android:width="@dimen/button_size"
-	android:height="@dimen/button_size"
-        android:text="@string/digit7" />
-
-    <com.buzz.bee.openir.irButton
-        android:id="@+id/d8btn"
-	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:layout_row="5"
-	android:layout_column="1"
-	android:width="@dimen/button_size"
-	android:height="@dimen/button_size"
-        android:text="@string/digit8" />
-
-    <com.buzz.bee.openir.irButton
-        android:id="@+id/d9btn"
- 	android:layout_width="wrap_content"
-	android:layout_height="wrap_content"
-	android:layout_row="5"
-	android:layout_column="2"
-	android:width="@dimen/button_size"
-	android:height="@dimen/button_size"
-        android:text="@string/digit9" />
-
-    <com.buzz.bee.openir.irButton
-        android:id="@+id/d0btn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
 	android:layout_row="6"
 	android:layout_column="1"
 	android:width="@dimen/button_size"
 	android:height="@dimen/button_size"
+        android:text="@string/digit7" />
+
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/d8btn"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_row="6"
+	android:layout_column="2"
+	android:width="@dimen/button_size"
+	android:height="@dimen/button_size"
+        android:text="@string/digit8" />
+
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/d9btn"
+ 	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_row="6"
+	android:layout_column="3"
+	android:width="@dimen/button_size"
+	android:height="@dimen/button_size"
+        android:text="@string/digit9" />
+
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/d0btn"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_row="7"
+	android:layout_column="2"
+	android:width="@dimen/button_size"
+	android:height="@dimen/button_size"
         android:text="@string/digit0" />
     
-         <Space
+    <Space
 	android:layout_width="@dimen/button_size"
 	android:layout_height="20dp"
 	android:layout_row="0"
@@ -184,6 +200,7 @@
 	android:layout_columnSpan="10"/>
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/backbtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -194,6 +211,7 @@
         android:text="@string/back" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/menubtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -204,6 +222,7 @@
         android:text="@string/menu" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/guidebtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -215,6 +234,7 @@
 
 
     <TextView
+        android:textColor="#fff"
         android:id="@+id/identify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -224,6 +244,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/arrowleftbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -237,6 +258,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/arrowrightbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -251,6 +273,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/inputbtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -261,6 +284,7 @@
         android:text="@string/inputs" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/mutebtn"
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content"
@@ -271,6 +295,7 @@
         android:text="@string/mute" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/selectbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -283,6 +308,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/arrowdwnBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -296,6 +322,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/arrowupbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -309,6 +336,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/playbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -322,6 +350,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/stopBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -335,6 +364,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/paueBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -348,6 +378,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/rewindBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -361,6 +392,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/fastfBtn"
         android:layout_column="14"
         android:layout_row="25"
@@ -372,6 +404,7 @@
         android:width="@dimen/button_size" />
 
     <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
         android:id="@+id/recBtn"
         android:layout_column="15"
         android:layout_row="25"
@@ -381,5 +414,54 @@
         android:scaleType="fitCenter"
         android:src="@drawable/record"
         android:width="@dimen/button_size" />
-   
+
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/redBtn"
+        android:layout_column="6"
+        android:layout_row="5"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
+        android:src="@drawable/record"
+        android:width="@dimen/button_size" />
+        
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/greenBtn"
+        android:layout_column="7"
+        android:layout_row="5"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
+        android:src="@drawable/record"
+        android:width="@dimen/button_size" />
+                
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/yellowBtn"
+        android:layout_column="8"
+        android:layout_row="5"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
+        android:src="@drawable/record"
+        android:width="@dimen/button_size" />
+                        
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/blueBtn"
+        android:layout_column="9"
+        android:layout_row="5"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
+        android:src="@drawable/record"
+        android:width="@dimen/button_size" />
+
+
 </GridLayout>

@@ -54,7 +54,7 @@ public class irDevice {
 	}
 	
 	private void mapKeyTV() {
-		deviceButtons = new irButton[31];
+		deviceButtons = new irButton[35];
 		deviceButtons[0] = (irButton) this.activity.findViewById(R.id.powerbtn);
 		deviceButtons[0].setName("powerbtn");
 		deviceButtons[1] = (irButton) this.activity.findViewById(R.id.volupbtn);
@@ -127,7 +127,19 @@ public class irDevice {
 		deviceButtons[30] = (irButton) this.activity.findViewById(R.id.recBtn);
 		deviceButtons[30].setName("recordBtn");
 		deviceButtons[30].setIcon(R.drawable.record);
-		buttonCount = 31;
+		deviceButtons[31] = (irButton) this.activity.findViewById(R.id.redBtn);
+		deviceButtons[31].setName("redBtn");
+		deviceButtons[31].setIcon(R.drawable.redbtn);
+		deviceButtons[32] = (irButton) this.activity.findViewById(R.id.greenBtn);
+		deviceButtons[32].setName("greenBtn");
+		deviceButtons[32].setIcon(R.drawable.greenbtn);
+		deviceButtons[33] = (irButton) this.activity.findViewById(R.id.yellowBtn);
+		deviceButtons[33].setName("yellowBtn");
+		deviceButtons[33].setIcon(R.drawable.yellowbtn);
+		deviceButtons[34] = (irButton) this.activity.findViewById(R.id.blueBtn);
+		deviceButtons[34].setName("blueBtn");
+		deviceButtons[34].setIcon(R.drawable.stop);
+		buttonCount = 35;
 		
 		
 	}
