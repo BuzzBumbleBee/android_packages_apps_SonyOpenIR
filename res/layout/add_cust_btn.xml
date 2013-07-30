@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/custBtnLbl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c1" />
+
+    <EditText
+        android:id="@+id/custBtnName1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/custBtnLbl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c2" />
+
+    <EditText
+        android:id="@+id/custBtnName2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/custBtnLbl3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c3" />
+
+    <EditText
+        android:id="@+id/custBtnName3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/custBtnLbl4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c4" />
+
+    <EditText
+        android:id="@+id/custBtnName4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/ok" />
+
+</LinearLayout>

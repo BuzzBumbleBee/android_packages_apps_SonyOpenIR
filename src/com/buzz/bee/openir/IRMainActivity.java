@@ -19,8 +19,11 @@ package com.buzz.bee.openir;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.FileOutputStream;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.util.Vector;
-
 import android.os.Bundle;
 import android.os.Environment;
 import android.app.Activity;
@@ -35,6 +38,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.text.InputType;
 import android.util.*;
+import android.app.Dialog;
+import android.view.LayoutInflater;
 
 public class IRMainActivity extends Activity {
     
@@ -70,6 +75,8 @@ public class IRMainActivity extends Activity {
       public static IRMainActivity cContext;
       
       AlertDialog alertDialog;
+
+      Dialog addKeyDialog;
 
        public void showLernMsg() { 
             
@@ -145,18 +152,21 @@ public class IRMainActivity extends Activity {
         
         irDevice device = new irDevice(1,"TV 1",this);
 
+        addKeyDialog = new Dialog(this);
+        LayoutInflater inflater=LayoutInflater.from(this);
+		
+        View addView = inflater.inflate(R.layout.add_cust_btn, null);
+		
+        addKeyDialog.setTitle("Set Custom Button Names ...");
+        addKeyDialog.setContentView(addView);
+
         buttons = device.getButtonMap();
         NUM_KEYS = device.getButtonCount();
-
-        learn = (android.widget.Switch) findViewById(R.id.leanswitch);
         
         for(int i=0; i < NUM_KEYS; i++) {
             buttons[i].setOnClickListener(btnHandle);
             
         }        
-
-        learn.setOnCheckedChangeListener(learnCheck);
-        learn.setChecked(false);
         
         altDialog= new AlertDialog.Builder(this);
 
@@ -172,6 +182,8 @@ public class IRMainActivity extends Activity {
         if (status < 1) {
             Log.e(TAG,"Error starting IR : " + status);
         }
+
+        processCoustomKeys(false);
     }
     
     private void resetIR() {
@@ -367,6 +379,7 @@ public class IRMainActivity extends Activity {
                 currentDevice = devices.get(item);
                 idView.setText(currentDevice);
                 updateAvailButtons();
+                processCoustomKeys(false);
             }
         });
         AlertDialog alert = builder.create();
@@ -382,6 +395,20 @@ public class IRMainActivity extends Activity {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.irmain, menu);
         super.onCreateOptionsMenu(menu);
+
+
+        for (int i = 0; i < menu.size(); i++) {
+            MenuItem item = menu.getItem(i);
+            if (item.getItemId() == R.id.act1) {
+                View action = item.getActionView();
+                if (action != null) {
+                    learn = (android.widget.Switch) action.findViewById(R.id.leanswitch);
+                    learn.setOnCheckedChangeListener(learnCheck);
+                }
+            }
+        }
+
+
         return true;
     }
     
@@ -432,6 +459,81 @@ public class IRMainActivity extends Activity {
             alert.show();
                 
     }
+
+    private void processCoustomKeys(boolean setup){
+
+        if(setup){
+            android.widget.Button okBtn = (android.widget.Button) addKeyDialog.findViewById(R.id.btnConfirm);
+            okBtn.setOnClickListener(custBtnHandle);
+            addKeyDialog.show();
+        }
+
+        String names = null;
+
+        buttons[35].setText("");
+        buttons[36].setText("");
+        buttons[37].setText("");
+        buttons[38].setText("");
+
+        try{
+            String fileName = ((baseDir + currentDevice +"/cust_key_names.txt"));
+            FileReader file = new FileReader(fileName);
+            BufferedReader reader = new BufferedReader(file);
+            names = reader.readLine();
+            reader.close();
+        } catch (Exception e){
+            e.printStackTrace(); 
+            return;
+        }
+
+
+        String[] name_array = names.split(";;");
+
+        for (int i = 0; i < name_array.length; i++){
+            Log.i("processCoustomKeys",name_array[i]);
+            buttons[35+i].setText(name_array[i]);
+        }
+    }
+
+
+    View.OnClickListener custBtnHandle = new View.OnClickListener() {
+        public void onClick(View v) {
+
+            android.widget.TextView C1 = (android.widget.TextView) addKeyDialog.findViewById(R.id.custBtnName1);
+            android.widget.TextView C2 = (android.widget.TextView) addKeyDialog.findViewById(R.id.custBtnName2);
+            android.widget.TextView C3 = (android.widget.TextView) addKeyDialog.findViewById(R.id.custBtnName3);
+            android.widget.TextView C4 = (android.widget.TextView) addKeyDialog.findViewById(R.id.custBtnName4);
+
+            String fileName = ((baseDir + currentDevice +"/cust_key_names.txt"));
+            File file = new File(fileName);
+            OutputStreamWriter out;
+
+            String names = C1.getText() +";;"+ C2.getText() +";;"+ C3.getText() +";;"+ C4.getText();
+
+            Log.i("custBtnHandle",names);
+
+            
+            try{
+                out = new OutputStreamWriter(new FileOutputStream(file));
+                out.write(names); 
+                out.flush(); 
+                out.close();
+            } catch (Exception e){
+                e.printStackTrace(); 
+
+            }
+
+            addKeyDialog.dismiss();
+
+            C1.setText("");
+            C2.setText("");
+            C3.setText("");
+            C4.setText("");
+
+            processCoustomKeys(false);
+        }
+    };
+    
     
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -448,6 +550,9 @@ public class IRMainActivity extends Activity {
                 return true;
             case R.id.delDevice:
                 deleteDevice();
+                return true;
+            case R.id.setCustKeyNames:
+                processCoustomKeys(true);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

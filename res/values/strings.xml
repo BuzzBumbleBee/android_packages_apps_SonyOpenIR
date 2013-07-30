@@ -36,4 +36,10 @@
     <string name="button3">Button3</string>
     <string name="button4">Button4</string>
 
+    <string name="c1">C1</string>
+    <string name="c2">C2</string>
+    <string name="c3">C3</string>
+    <string name="c4">C4</string>
+    <string name="ok">OK</string>
+
 </resources>

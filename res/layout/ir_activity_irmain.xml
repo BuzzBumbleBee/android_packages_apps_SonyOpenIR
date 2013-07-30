@@ -15,16 +15,7 @@
     android:verticalSpacing="4dp"
     tools:context=".MainActivity" >
     
-   <Switch
-        android:textColor="#fff"
-        android:id="@+id/leanswitch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-	android:layout_row="25"
-        android:layout_column="5"
-        android:checked="false"
-        android:text="@string/learn" />
-    
+   
    <com.buzz.bee.openir.irButton
         android:textColor="#fff"
 	android:id="@+id/powerbtn"
@@ -461,6 +452,51 @@
         android:minWidth="@dimen/button_size"
         android:scaleType="fitCenter"
         android:src="@drawable/record"
+        android:width="@dimen/button_size" />
+
+
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/c1Btn"
+        android:layout_column="6"
+        android:layout_row="7"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
+        android:width="@dimen/button_size" />
+        
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/c2Btn"
+        android:layout_column="7"
+        android:layout_row="7"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
+        android:width="@dimen/button_size" />
+                
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/c3Btn"
+        android:layout_column="8"
+        android:layout_row="7"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
+        android:width="@dimen/button_size" />
+                        
+    <com.buzz.bee.openir.irButton
+        android:textColor="#fff"
+        android:id="@+id/c4Btn"
+        android:layout_column="9"
+        android:layout_row="7"
+        android:height="@dimen/button_size"
+        android:minHeight="@dimen/button_size"
+        android:minWidth="@dimen/button_size"
+        android:scaleType="fitCenter"
         android:width="@dimen/button_size" />
 
 

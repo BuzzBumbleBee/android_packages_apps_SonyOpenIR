@@ -5,8 +5,29 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="Switch Device"/>
-    <item android:id="@+id/resetIR" android:titleCondensed="Rst IR" android:title="Reset IR Device"></item>
-    <item android:id="@+id/addDevice" android:titleCondensed="Add Dev" android:title="Add Device"></item>
-    <item android:id="@+id/delDevice" android:titleCondensed="Del Dev" android:title="Delete Device"></item>
+    <item 
+        android:id="@+id/resetIR" 
+        android:titleCondensed="Rst IR" 
+        android:title="Reset IR Device"/>
+
+    <item 
+        android:id="@+id/setCustKeyNames" 
+        android:titleCondensed="Set Cust Key Name" 
+        android:title="Set Custom Key Names"/>
+
+    <item android:id="@+id/addDevice" 
+        android:titleCondensed="Add Dev" 
+        android:title="Add Device"/>
+
+    <item android:id="@+id/delDevice" 
+        android:titleCondensed="Del Dev" 
+        android:title="Delete Device"/>
+
+     <item
+        android:actionLayout="@layout/act1"
+        android:id="@+id/act1"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:title="@string/action_settings"/>
 
 </menu>
